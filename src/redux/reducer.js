@@ -119,8 +119,8 @@ const initialState = {
 
 function reducer(state = initialState, action) {
     switch (action.type) {
-        // case 'ADD_BOOKS':
-        //     const books = action.payload.books;
+        // case 'SORT_PRICE':
+        //     const books = action.payload.id;
         //     const addBooks = [...state.cart, books];
 
         //     return {...state, addBooks};
