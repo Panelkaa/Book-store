@@ -12,24 +12,6 @@ class GoodsItem extends PureComponent {
     books: []
   }
 
-  // componentDidMount () {
-  //   fetch("http://45.8.249.57/bookstore-api/books")
-  //     .then(res => res.json)
-  //     .then(data => {
-  //       const arrData = data
-  //       console.log(arrData)
-  //       this.setState({
-  //         books: arrData
-  //       })
-  //       store.dispatch({
-  //         type: "ADD_BOOKS",
-  //         payload: {
-  //           books: arrCoins
-  //       }     
-  //       })
-
-  //     })
-  // }
   render() {
     const { title, authorName, price, id, image } = this.props;
 

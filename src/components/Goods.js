@@ -39,6 +39,9 @@ class Goods extends PureComponent {
       sortBooks.sort(
         (a, b) => {return a.price < b.price ? 1 : -1}
       )
+      this.setState({
+        upPrice: sortBooks
+      })
     }else {
       this.setState({
         asset: true
@@ -46,12 +49,13 @@ class Goods extends PureComponent {
       sortBooks.sort(
         (a, b) => {return a.price > b.price ? 1 : -1}
       )
+      this.setState({
+      upPrice: sortBooks
+    })
     }
     
 
-    this.setState({
-      upPrice: sortBooks
-    })
+    
     
   }
 
@@ -59,7 +63,6 @@ class Goods extends PureComponent {
   
 
   render() {
-    console.log(this.state.upPrice)
     return (
       <div className="goods">
         <h2 className="goods__title">Магазин книг</h2>
@@ -69,7 +72,7 @@ class Goods extends PureComponent {
         <button type="button" className="btn btn-outline-dark sort" onClick={this.upPrice}>Cортировать по цене &#8593;&#8595;</button>
 
 
-      {this.props.goods  
+        {this.props.goods  
            && (this.state.upPrice == "" ? this.props.goods.filter((item) =>
            this.state.name ? item.title.toLowerCase().includes(this.state.name.toLowerCase()) : "0"       
          ) : this.state.upPrice) 
